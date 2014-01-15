@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3slc2 (unreleased)
+--------------------
+
+- Nothing changed yet.
+
+
 0.3slc1 (2014-01-15)
 --------------------
 
