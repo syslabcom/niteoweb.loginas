@@ -13,7 +13,7 @@
         <h5 i18n:translate="login_as_user_warning">This is a admin-only form for logging as other users. Please use it wisely.</h5>
         <br />
 
-        <form method="post" tal:define="errors view/errors | nothing" tal:condition="view/is_dev_mode" action="@@login-as">
+        <form method="post" tal:define="errors view/errors | nothing" action="@@login-as">
             <div tal:define="error errors/user | nothing;
                     user request/user | nothing;"
                     tal:attributes="class python: error and 'field error' or 'field'">
