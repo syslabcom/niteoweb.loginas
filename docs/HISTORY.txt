@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.3 (unreleased)
-----------------
+0.3slc1 (2014-01-15)
+--------------------
 
 - Support for Plone 4.1+
   [naro]

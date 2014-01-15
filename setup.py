@@ -8,7 +8,7 @@ Report bugs to info [at] niteoweb.com.
 """
 
 setup(name='niteoweb.loginas',
-      version='0.3dev',
+      version='0.3slc1',
       description="Allow administrator to login as another user (useful for debugging).",
       long_description=DESC,
       classifiers=[
