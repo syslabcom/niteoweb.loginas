@@ -4,8 +4,8 @@ Changelog
 0.3slc3 (unreleased)
 --------------------
 
-- Nothing changed yet.
-
+- Do not list the users when the site is configured for many_users.
+  [ale-rt]
 
 0.3slc2 (2014-01-15)
 --------------------
@@ -41,4 +41,3 @@ Changelog
 
   * Initial release
     [iElectric]
-

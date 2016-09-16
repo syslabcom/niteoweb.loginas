@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" 
+<html xmlns="http://www.w3.org/1999/xhtml"
       xml:lang="en" lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
@@ -24,7 +24,7 @@
             </div>
         </form>
 
-        <table>
+        <table tal:condition="not: here/portal_properties/site_properties/many_users|here/usergroup-userprefs/many_users|nothing">
             <tr><th i18n:translate="list_users_user">Available Users</th><th i18n:translate="list_users_fullname">Fullname</th></tr>
             <tr tal:repeat="member view/members">
                 <td tal:content="member/username" />
