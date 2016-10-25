@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
-import re
-import os
-
-from zope.component import getMultiAdapter
+from Globals import DevelopmentMode
+from plone import api
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Globals import DevelopmentMode
-from niteoweb.loginas import NiteowebLoginasMF as _
+from zope.component import getMultiAdapter
 
 
 class LoginAs(BrowserView):
@@ -16,7 +13,9 @@ class LoginAs(BrowserView):
     template = ViewPageTemplateFile('login_as.pt')
 
     def __call__(self):
-        self.portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
+        self.portal_state = getMultiAdapter(
+            (self.context, self.request), name=u'plone_portal_state'
+        )
         self.acl_users = getToolByName(self.context, 'acl_users')
 
         # Hide the editable-object border
@@ -39,10 +38,14 @@ class LoginAs(BrowserView):
 
             if hasattr(self.acl_users.session, 'setupSession'):
                 # Plone 3
-                self.acl_users.session.setupSession(user, self.request.response)
+                self.acl_users.session.setupSession(
+                    user, self.request.response
+                )
             else:
                 # Plone 4
-                self.acl_users.session._setupSession(user, self.request.response)
+                self.acl_users.session._setupSession(
+                    user, self.request.response
+                )
 
             self.request.response.redirect(self.portal_state.portal_url())
 
