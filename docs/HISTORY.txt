@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3slc4 (unreleased)
+--------------------
+
+- Nothing changed yet.
+
+
 0.3slc3 (2016-10-25)
 --------------------
 
