@@ -4,7 +4,10 @@ Changelog
 0.3slc4 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Put the many_users check in the browser view class
+  and make it context unaware.
+  The default behavior is set as the site will have many users.
+  [ale-rt]
 
 
 0.3slc3 (2016-10-25)

@@ -29,6 +29,7 @@ setup(name='niteoweb.loginas',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.api',
       ],
       entry_points="""
          [z3c.autoinclude.plugin]

@@ -60,5 +60,22 @@ class LoginAs(BrowserView):
 
         return results
 
+    def has_many_users(self):
+        ''' Check if the sitre has many users
+
+        Since plone5 this is stored on the registry,
+        while before it was a portal_property.
+
+        If nothing is working return True
+        '''
+        try:
+            return api.portal.get_registry_record('plone.many_users')
+        except api.exc.InvalidParameterError:
+            pass
+        sp = api.portal.get_tool('portal_properties').get('site_properties')
+        if sp:
+            sp.getProperty('many_users', True)
+        return True
+
     def is_dev_mode(self):
         return DevelopmentMode

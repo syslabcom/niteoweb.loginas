@@ -24,7 +24,7 @@
             </div>
         </form>
 
-        <table tal:condition="not: here/portal_properties/site_properties/many_users|here/usergroup-userprefs/many_users|nothing">
+        <table tal:condition="not: view/has_many_users">
             <tr><th i18n:translate="list_users_user">Available Users</th><th i18n:translate="list_users_fullname">Fullname</th></tr>
             <tr tal:repeat="member view/members">
                 <td tal:content="member/username" />
