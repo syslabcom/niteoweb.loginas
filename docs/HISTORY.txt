@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3slc4 (unreleased)
+0.3slc4 (2017-01-20)
 --------------------
 
 - Put the many_users check in the browser view class
